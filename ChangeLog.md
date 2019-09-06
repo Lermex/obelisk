@@ -35,6 +35,7 @@ This project's release branch is `master`. This log is written from the perspect
 * ([#693](https://github.com/obsidiansystems/obelisk/pull/693)) Fix a bug where some packages in `.attr-cache` directories would be incorrectly picked up and used instead of the correct ones when using `ob run`/`ob watch`/`ob repl`.
 * ([#700](https://github.com/obsidiansystems/obelisk/pull/700)) Ensure `ob init` uses the thunk format of the target obelisk rather than the one currently running the init command. If a user had installed a version of obelisk with a new thunk format, a newly initialized skeleton of an older version would not be able to unpack it's own `.obelisk/impl`.
 * ([#705](https://github.com/obsidiansystems/obelisk/pull/705)) Add `Obelisk.Route.packTextEncoder` and generalize `Obelisk.Route.unpackTextEncoder` over any `Data.Text.Lens.IsText`.
+* ([#697](https://github.com/obsidiansystems/obelisk/pull/697)) Add Docker support using nix's [`dockerTools.buildImage`](https://nixos.org/nixpkgs/manual/#ssec-pkgs-dockerTools-buildImage)
 
 ## v0.7.0.1
 
