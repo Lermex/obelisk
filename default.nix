@@ -173,7 +173,7 @@ in rec {
     , internalPort ? 8000
     , version ? "latest"
     , created ? "now"
-    ,extraContents ? []
+    , extraContents ? []
     , extraPaths ? []
     }@args:
     let
@@ -195,7 +195,8 @@ in rec {
           ))
         ];
         Expose = internalPort;
-        Entrypoint = ["/var/lib/backend/backend"];
+        Entrypoint = ["sh" "-c"];
+        Cmd = ["/var/lib/backend/backend --port=$PORT"];
         WorkingDir = "/var/lib/backend";
         User = "99:99";
       };
